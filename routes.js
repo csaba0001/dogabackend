@@ -40,7 +40,7 @@ router.post("/cars", (req, res) => {
     [brand, model, color, year],
     function (err) {
       if (err) return res.status(500).json({ message: err.message });
-      res.status(201).json({brand, model, color, year });
+      res.status(201).json({ brand, model, color, year });
     }
   );
 });
@@ -58,7 +58,7 @@ router.put("/cars/:id", (req, res) => {
       [brand, model, color, year, id],
       function (err) {
         if (err) return res.status(500).json({ message: err.message });
-        res.status(200).json({brand, model, color, year });
+        res.status(200).json({ brand, model, color, year });
       }
     );
   });
